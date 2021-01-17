@@ -1,13 +1,21 @@
-// console.log('external script running');
+// to get btn reference in javascript
+var btnTranslate = document.querySelector('#btn-translate')
 
-// alert('this script wrks')
+console.log(btnTranslate);
 
-// input
-var userName = prompt('May i know your name')
+// storing btnrefrece as globalvariable
+// temp1.style.backgroundColor = 'red'
+// doing things using javascript on ur html: domScripting
 
-// processing
-var greeting = 'welcome ' + userName
 
-// output
-alert(greeting);
+function clickHandler() {
+  console.log('clicked');
+}
+
+// tolisten to event 
+btnTranslate.addEventListener('click', clickHandler)
+
+
+// google
+// document.body.style.backgroundColor = 'blue'
 

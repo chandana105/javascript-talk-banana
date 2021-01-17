@@ -8,10 +8,14 @@
   <!-- <script>
     console.log('internal script running')
   </script> -->
-  <!-- html code is run from top to bottom  -->
-  <script src="app.js" type="text/javascript"></script>
+  <!-- file is being read it goes from top to bottom, dont wanted scriptto bereadfirst, it shouldloadonce the body has finshed loading  -->
+
 </head>
 <body>
   <h1>talk banana</h1>
+
+  <button id="btn-translate">Translate</button>
+
+  <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
