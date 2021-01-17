@@ -1,21 +1,18 @@
-// to get btn reference in javascript
 var btnTranslate = document.querySelector('#btn-translate')
+var txtInput = document.querySelector('#txt-input')
 
 console.log(btnTranslate);
+console.log(txtInput);
 
-// storing btnrefrece as globalvariable
-// temp1.style.backgroundColor = 'red'
-// doing things using javascript on ur html: domScripting
 
 
 function clickHandler() {
   console.log('clicked');
+  console.log('input is ' + txtInput.value);
 }
 
 // tolisten to event 
 btnTranslate.addEventListener('click', clickHandler)
 
 
-// google
-// document.body.style.backgroundColor = 'blue'
 
