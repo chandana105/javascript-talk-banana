@@ -7,7 +7,9 @@ var btnTranslate = document.querySelector('#btn-translate')
 // ll give output
 var outputDiv = document.querySelector('#output');
 
-const serverURL = 'https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json'
+// const serverURL = 'https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json'
+
+const serverURL = 'https://api.funtranslations.com/translate/minion.json'
 
 // ?text=testing
 
@@ -15,34 +17,29 @@ function getTranslationURL(text) {
   return serverURL + '?' + 'text=' + text
 }
 
-function clickHandler() {
-  // outputDiv.innerText= 'translated:' + txtInput.value
+function errorHandler(error) {
+  console.log('error occured' , error) ;
+  alert('something went wrong, try again after sometime!')
+}
 
-  let inputText = txtInput.value
+function clickHandler() {
+  let inputText = txtInput.value //input
+
+  // processing (went t server)
   fetch(getTranslationURL(inputText))
     .then(res => res.json())
-    .then(json => console.log(json.contents.translated))
+    .then(json => {
+      var translatedText = json.contents.translated;
+      outputDiv.innerText = translatedText //output
+    })
+      // console.log(json.contents.translated))
+    // .catch(err => console.log('error occured' , err))
+    .catch(errorHandler)
 }
 
 btnTranslate.addEventListener('click', clickHandler)
 
 
-
-// var text1 = 'I am Iron Man'
-// undefined
-// var text2 = 'I am Shaktimaan'
-// undefined
-// var text3 = 'I am Batman'
-// undefined
-// function constructURL(text) {
-//     return 'https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json' + '?text=' + text }
-// undefined
-// constructURL(text1)
-// "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text=I am Iron Man"
-// function doFetch(text) {
-//     fetch(constructURL(text)) .then(response => response.json()) .then(json => console.log(json)) }
-// undefined
-// doFetch(text1)
 
 
 
