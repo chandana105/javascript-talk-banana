@@ -55,7 +55,6 @@ button {
   cursor: pointer;
 }
 
-
 #output {
   box-sizing: border-box;
   width: 100%;
@@ -74,7 +73,6 @@ footer {
   background-color: var(--primary-color);
   text-align: center;
   border-top-right-radius: 1rem;
-
 }
 
 footer p {
