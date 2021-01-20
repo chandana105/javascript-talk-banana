@@ -1,2 +1,2 @@
 # javascript-talk-banana
-It's a language interpreter application which converts an english sentence to minion language. 
+It's a language interpreter application which translates an english sentence to minion language. 
