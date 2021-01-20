@@ -52,6 +52,7 @@ button {
   font-size: large;
   font-family: 'Dancing Script', cursive;
   font-family: 'Lobster', cursive;
+  cursor: pointer;
 }
 
 
